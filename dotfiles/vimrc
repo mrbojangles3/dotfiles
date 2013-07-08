@@ -1,25 +1,20 @@
 execute pathogen#infect()
 "filetype plugin on
-set backspace=eol,start,indent
 
-"Searching
+
+"Apperance"
+colorscheme darkspectrum
+syntax enable
+set gfn=Droid\ Sans\ Mono\ 11
+set columns=80
+
+"Searching"
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-
-
 set showmatch
-set noerrorbells
-set novisualbell
-set t_vb=
 
-syntax enable
-colorscheme darkspectrum
-set ffs=unix
-set gfn=Droid\ Sans\ Mono\ 11
-set nocompatible
-set columns=80
 
 
 "General Settings"
@@ -31,6 +26,34 @@ set showmode    "Show current mode down at the bottom"
 set textwidth=80
 
 
+"Operation"
+set backspace=eol,start,indent
+set ffs=unix
+set noerrorbells
+set novisualbell
+set t_vb=
+set nocompatible
+
+
 "Fancy Stuff"
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 match Todo /\s\+$/
+
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+noremap <F8> :call CompileRun()<CR>
+function! CompileRun()
+    if &filetype == 'c'
+        :w
+        :!gcc % -o %< && ./%<
+    elseif &filetype == 'cpp'
+        :w
+        :!g++ -std=c++0x % -o %< && ./%<
+    else
+        :echo "Nothing to do with this filetype"
+    endif
+endfunction
+
+
+
