@@ -10,3 +10,7 @@ Create Symlinks:
 Git Commands:
 	git remote add origin https://github.com/mrbojangles3/dotvim.git
 	git push -u origin master
+
+If a change is made:
+	git push -u origin master
+	cd ~/.vim; git pull
