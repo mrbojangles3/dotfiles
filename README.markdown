@@ -31,4 +31,5 @@ git submodule update
 
 ## Where I learned this:
 http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-Also really liking the book
+
+@nelstrom really liking the book
