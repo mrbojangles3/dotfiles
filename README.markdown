@@ -2,13 +2,13 @@
 
 ## Installation:
 ```bash
-git clone git://github.com/mrbojangles3/dotvim.git
+git clone git://github.com/mrbojangles3/dotvim.git ~/.vim
 ```
 
 ## Create Symlinks:
 ```bash
-	ln -s ~/dotfiles/vimrc ~/.vimrc
-	ln -s ~/dotfiles/gvimrc ~/.gvimrc
+	ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
+	ln -s ~/.vim/dotfiles/gvimrc ~/.gvimrc
 ```
 
 ## Git Commands:
