@@ -40,6 +40,7 @@ set pastetoggle=<F2>
 "Fancy Stuff"
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 match Todo /\s\+$/
+autocmd VimResized * wincmd =
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
