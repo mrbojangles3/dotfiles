@@ -9,3 +9,6 @@ set gfn=Droid\ Sans\ Mono\ 12
 "General Settings
 filetype plugin on
 filetype indent on
+
+"Automatically even split windows
+autocmd VimResized * wincmd =
