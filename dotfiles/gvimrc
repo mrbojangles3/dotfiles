@@ -10,5 +10,25 @@ set gfn=Droid\ Sans\ Mono\ 12
 filetype plugin on
 filetype indent on
 
+"Turn off Scroll Bars
+set guioptions-=l
+set guioptions-=r
+set guioptions-=b
+
 "Automatically even split windows
 autocmd VimResized * wincmd =
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+noremap <F8> :call CompileRun()<CR>
+function! CompileRun()
+    if &filetype == 'c'
+        :w
+        :!gcc % -g -o %< && ./%<
+    elseif &filetype == 'cpp'
+        :w
+        :!g++ -g -std=c++11 % -o %< && ./%<
+    else
+        :echo "Nothing to do with this filetype"
+    endif
+endfunction

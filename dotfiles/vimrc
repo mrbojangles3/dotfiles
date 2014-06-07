@@ -49,10 +49,10 @@ noremap <F8> :call CompileRun()<CR>
 function! CompileRun()
     if &filetype == 'c'
         :w
-        :!gcc % -o %< && ./%<
+        :!gcc % -g -o %< && ./%<
     elseif &filetype == 'cpp'
         :w
-        :!g++ -std=c++0x % -o %< && ./%<
+        :!g++ -std=c++11 % -o %< && ./%<
     else
         :echo "Nothing to do with this filetype"
     endif
