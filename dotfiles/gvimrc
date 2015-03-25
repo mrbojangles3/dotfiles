@@ -3,15 +3,27 @@
 syntax enable 
 set background=dark 
 colorscheme solarized 
-set gfn=Droid\ Sans\ Mono\ 12
+set guifont=Inconsolata\ Medium\ 14
 
 
 "General Settings
 filetype plugin on
 filetype indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+"Operation"
+set backspace=eol,start,indent
+set ffs=unix
+set noerrorbells
+set novisualbell
+set t_vb=
+set nocompatible
+set pastetoggle=<F2>
 
 "Turn off Scroll Bars
-set guioptions-=l
+set guioptions-=L
 set guioptions-=r
 set guioptions-=b
 
