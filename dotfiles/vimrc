@@ -16,9 +16,10 @@ set showmatch
 
 
 "General Settings"
-set tabstop=8
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set laststatus=2
-set shiftwidth=8
 set autoread    "Reload files changed outside vim"
 set showmode    "Show current mode down at the bottom"
 set textwidth=80
