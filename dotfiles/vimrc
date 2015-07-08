@@ -4,7 +4,7 @@ execute pathogen#infect()
 syntax enable
 set background=dark
 colorscheme darktango
-set gfn=Droid\ Sans\ Mono\ 12
+set gfn=Inconsolata\ Medium\ 12
 
 "Searching"
 set ignorecase
