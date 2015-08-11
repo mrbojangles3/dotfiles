@@ -23,7 +23,6 @@ set laststatus=2
 set autoread    "Reload files changed outside vim"
 set showmode    "Show current mode down at the bottom"
 set textwidth=80
-set columns=80
 filetype plugin on
 filetype indent on
 
