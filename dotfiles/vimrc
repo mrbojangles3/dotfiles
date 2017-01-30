@@ -1,9 +1,28 @@
-execute pathogen#infect()
+" Vundle Stuff"
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+"Plugins"
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-scripts/taglist.vim'
+
+
+"Colors"
+Plugin 'altercation/vim-colors-solarized'
+
+"End of Vundle Stuff"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 "Apperance"
-syntax enable
-set background=dark
-colorscheme darktango
+"set t_Co=256
+"set background=dark
+"colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
 
 "Searching"
