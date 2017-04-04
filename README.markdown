@@ -9,6 +9,7 @@ git clone git@github.com:mrbojangles3/dotvim.git ~/.vim
 ```bash
 ln -s ~/.vim/dotfiles/vimrc ~/.vimrc
 ln -s ~/.vim/dotfiles/gvimrc ~/.gvimrc
+ln -s ~/.vim/dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ## Git Commands:
@@ -24,12 +25,6 @@ cd ~/.vim; git pull
 ```
 
 ## Syncronizing Plugins:
-```bash
-git submodule init
-git submodule update
-```
 
-## Where I learned this:
-http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-
-@nelstrom really liking the book
+Using [vundle](https://github.com/VundleVim/)
+`vim +PluginInstall +qall`
