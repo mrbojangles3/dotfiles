@@ -31,6 +31,7 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
+set autochdir
 
 
 
@@ -41,6 +42,8 @@ set expandtab
 set laststatus=2
 set autoread    "Reload files changed outside vim"
 set showmode    "Show current mode down at the bottom"
+set modeline
+set tags=./tags,tags;
 filetype plugin on
 filetype indent on
 
@@ -59,6 +62,9 @@ set pastetoggle=<F2>
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 match Todo /\s\+$/
 autocmd VimResized * wincmd =
+
+"Toggle Taglist"
+nnoremap <Leader>t :TlistToggle<CR>
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
