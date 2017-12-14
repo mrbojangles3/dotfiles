@@ -22,13 +22,12 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 "Apperance"
-"set t_Co=256
+set t_Co=256
 "set background=dark
-"colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
 
 " Airline Theme"
-"let g:airline_theme='solarized'
+let g:airline_theme='term'
 
 "Searching"
 set ignorecase
