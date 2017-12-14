@@ -9,6 +9,8 @@ call vundle#rc()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 "Colors"
@@ -24,6 +26,9 @@ filetype plugin indent on    " required
 "set background=dark
 "colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
+
+" Airline Theme"
+"let g:airline_theme='solarized'
 
 "Searching"
 set ignorecase
@@ -59,7 +64,7 @@ set pastetoggle=<F2>
 
 
 "Fancy Stuff"
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 match Todo /\s\+$/
 autocmd VimResized * wincmd =
 
