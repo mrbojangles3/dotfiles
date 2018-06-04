@@ -1,13 +1,11 @@
 " Vundle Stuff"
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.Vim
+call vundle#begin()
 
 "Plugins"
-
-Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'VundleVim/Vundle.Vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
