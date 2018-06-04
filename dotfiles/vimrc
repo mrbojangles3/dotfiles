@@ -1,0 +1,88 @@
+" Vundle Stuff"
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#rc()
+
+"Plugins"
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+
+"Colors"
+Plugin 'altercation/vim-colors-solarized'
+
+"End of Vundle Stuff"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"Apperance"
+set t_Co=256
+"set background=dark
+set gfn=Inconsolata\ Medium\ 12
+
+" Airline Theme"
+let g:airline_theme='term'
+
+"Searching"
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set showmatch
+set autochdir
+
+
+
+"General Settings"
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set laststatus=2
+set autoread    "Reload files changed outside vim"
+set showmode    "Show current mode down at the bottom"
+set modeline
+set tags=./tags,tags;
+filetype plugin on
+filetype indent on
+
+
+"Operation"
+set backspace=eol,start,indent
+set ffs=unix
+set noerrorbells
+set novisualbell
+set t_vb=
+set nocompatible
+set pastetoggle=<F2>
+
+
+"Fancy Stuff"
+"set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+match Todo /\s\+$/
+autocmd VimResized * wincmd =
+
+"Toggle Taglist"
+nnoremap <Leader>t :TlistToggle<CR>
+
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+noremap <F8> :call CompileRun()<CR>
+function! CompileRun()
+    if &filetype == 'c'
+        :w
+        :!gcc % -g -o %< && ./%<
+    elseif &filetype == 'cpp'
+        :w
+        :!g++ -std=c++11 % -o %< && ./%<
+    else
+        :echo "Nothing to do with this filetype"
+    endif
+endfunction
+
