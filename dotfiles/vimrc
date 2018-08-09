@@ -23,6 +23,7 @@ filetype plugin indent on    " required
 set t_Co=256
 "set background=dark
 set gfn=Inconsolata\ Medium\ 12
+syntax on
 
 " Airline Theme"
 let g:airline_theme='term'
