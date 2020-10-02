@@ -2,7 +2,7 @@
 
 ## Installation:
 ```bash
-git clone --recurse-submodules git@github.com:mrbojangles3/dotvim.git ~/.vim
+git clone --recurse-submodules git@github.com:mrbojangles3/dotfiles.git ~/.vim
 ```
 
 ## Create Symlinks:
