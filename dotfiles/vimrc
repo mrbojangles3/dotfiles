@@ -21,7 +21,8 @@ filetype plugin indent on    " required
 
 "Apperance"
 set t_Co=256
-"set background=dark
+set background=dark
+colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
 syntax on
 
