@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.Vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'rust-lang/rust.vim'
+Plugin 'pearofducks/ansible-vim'
 
 
 "Colors"
