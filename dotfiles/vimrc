@@ -7,11 +7,9 @@ call vundle#begin()
 "Plugins"
 Plugin 'VundleVim/Vundle.Vim'
 Plugin 'vim-scripts/taglist.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rust-lang/rust.vim'
+Plugin 'itchyny/lightline.vim'
 Plugin 'pearofducks/ansible-vim'
-
 
 "Colors"
 Plugin 'altercation/vim-colors-solarized'
@@ -23,13 +21,15 @@ filetype plugin indent on    " required
 
 "Apperance"
 set t_Co=256
-set background=dark
+"set background=dark
 colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
 syntax on
 
-" Airline Theme"
-let g:airline_theme='term'
+" lightline Theme"
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 
 "Searching"
 set ignorecase
@@ -83,7 +83,7 @@ function! CompileRun()
         :!gcc % -g -o %< && ./%<
     elseif &filetype == 'cpp'
         :w
-        :!g++ -std=c++11 % -o %< && ./%<
+        :!g++ -std=c++14 % -o %< && ./%<
     else
         :echo "Nothing to do with this filetype"
     endif
