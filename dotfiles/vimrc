@@ -54,6 +54,7 @@ filetype plugin on
 filetype indent on
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType ruby   setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType c,c++ setlocal tabstop=4 shiftwidth=4 noexpandtab
 
 "Operation"
 set backspace=eol,start,indent
