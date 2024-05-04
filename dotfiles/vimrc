@@ -42,9 +42,6 @@ set autochdir
 
 
 "General Settings"
-set tabstop=4
-set shiftwidth=4
-set expandtab
 set laststatus=2
 set autoread    "Reload files changed outside vim"
 set showmode    "Show current mode down at the bottom"
