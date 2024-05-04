@@ -21,7 +21,7 @@ filetype plugin indent on    " required
 
 "Apperance"
 set t_Co=256
-"set background=dark
+set background=dark
 colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
 syntax on
@@ -50,8 +50,6 @@ set autoread    "Reload files changed outside vim"
 set showmode    "Show current mode down at the bottom"
 set modeline
 set tags=./tags,tags;
-filetype plugin on
-filetype indent on
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType ruby   setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType c,c++ setlocal tabstop=4 shiftwidth=4 noexpandtab
