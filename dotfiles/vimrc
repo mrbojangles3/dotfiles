@@ -10,6 +10,7 @@ Plugin 'vim-scripts/taglist.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pearofducks/ansible-vim'
+Plugin 'fatih/vim-go'
 
 "Colors"
 Plugin 'altercation/vim-colors-solarized'
