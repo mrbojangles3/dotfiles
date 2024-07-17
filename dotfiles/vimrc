@@ -51,7 +51,7 @@ set tags=./tags,tags;
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType ruby   setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType c,c++ setlocal tabstop=4 shiftwidth=4 noexpandtab
-autocmd FileType yaml setlocal tabstop=2 sts=2 sw=2 expandtab
+autocmd FileType yml,yaml setlocal tabstop=2 sts=2 sw=2 expandtab list listchars=tab:>-,eol:¬,trail:⋅,multispace:⋅⋅⋅\|
 
 "Operation"
 set backspace=eol,start,indent
