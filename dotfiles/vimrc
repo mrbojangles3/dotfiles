@@ -11,7 +11,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pearofducks/ansible-vim'
 Plugin 'fatih/vim-go'
-Plug 'NoahTheDuke/vim-just'
+Plugin 'NoahTheDuke/vim-just'
 
 "Colors"
 Plugin 'altercation/vim-colors-solarized'
