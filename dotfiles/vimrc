@@ -53,7 +53,7 @@ set tags=./tags,tags;
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType ruby   setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType c,c++ setlocal tabstop=4 shiftwidth=4 noexpandtab
-autocmd FileType markdown setlocal spell spelllang=en_us wrapmargin=100 formatoptions+=t formatoptions-=l
+autocmd FileType markdown setlocal spell spelllang=en_us textwidth=79 formatoptions+=ta formatoptions-=l
 autocmd FileType markdown highlight SpellBad ctermfg=009 ctermbg=011 guifg=#ff0000 guibg=#ffff00 
 autocmd FileType yml,yaml setlocal tabstop=2 sts=2 sw=2 expandtab number list listchars=tab:>-,eol:¬,trail:⋅,multispace:⋅⋅⋅\|
 
