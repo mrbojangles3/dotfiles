@@ -9,9 +9,12 @@ Plugin 'VundleVim/Vundle.Vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'itchyny/vim-gitbranch.vim'
 Plugin 'pearofducks/ansible-vim'
 Plugin 'fatih/vim-go'
 Plugin 'NoahTheDuke/vim-just'
+Plugin 'preservim/nerdtree'
+Plugin 'airblade/vim-gitgutter'
 
 "Colors"
 Plugin 'altercation/vim-colors-solarized'
@@ -27,10 +30,19 @@ set background=dark
 colorscheme solarized
 set gfn=Inconsolata\ Medium\ 12
 syntax on
+highlight clear SignColumn
+
 
 " lightline Theme"
 let g:lightline = {
       \ 'colorscheme': 'solarized',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
       \ }
 
 "Searching"
@@ -80,6 +92,9 @@ autocmd VimResized * wincmd =
 
 "Toggle Taglist"
 nnoremap <Leader>t :TlistToggle<CR>
+
+"Toggle NERDTree"
+nnoremap <Leader>n :NERDTreeFocus<CR>
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
